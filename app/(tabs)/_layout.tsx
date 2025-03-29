@@ -6,6 +6,7 @@ import { COLORS } from '@/constants/theme'
 export default function TabLayout() {
   return (
     <Tabs screenOptions={{ 
+        tabBarHideOnKeyboard:true,
         tabBarShowLabel: false, 
         headerShown:false, 
         tabBarActiveTintColor: COLORS.primary,
@@ -15,7 +16,7 @@ export default function TabLayout() {
           elevation: 0,
           height: 40,
           paddingBottom: 8,
-          borderRightWidth: 0,
+          borderTopWidth: 0,
           position: 'absolute',
         }
       }}
