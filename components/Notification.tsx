@@ -13,8 +13,7 @@ export default function Notification({ notification }: any) {
     return (
         <View style={styles.notificationItem}>
             <View style={styles.notificationContent}>
-                {/* todo: fix latter */}
-                <Link href="/notifications" asChild>
+                <Link href={`/user/${notification.sender._id}` as any} asChild>
                     <TouchableOpacity style={styles.avatarContainer}>
                         {notification.sender?.image && (
                             <Image

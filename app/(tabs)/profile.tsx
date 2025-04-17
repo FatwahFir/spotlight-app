@@ -31,6 +31,8 @@ export default function Profile() {
   const updateProfile = useMutation(api.user.updateProfile);
 
   const handleSaveProfile = async () => {
+    await updateProfile(editedProfile)
+    setEditModalVisible(false)
   };
 
   if (!currentUser || posts === undefined) return <Loader />;
